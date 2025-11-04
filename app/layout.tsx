@@ -69,16 +69,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={workSans.variable}>
         {children}
-        <Toaster
-          richColors={true}
-          // toastOptions={{
-          //   classNames: {
-          //     toast: "!text-white",
-          //     title: "!text-white",
-          //     description: "!text-white",
-          //   },
-          // }}
-        />
+        <Toaster richColors={true} />
       </body>
     </html>
   );
