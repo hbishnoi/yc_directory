@@ -115,7 +115,7 @@ const StartupForm = () => {
         <label htmlFor="category" className="startup-form_label">
           Category
         </label>
-        <input
+        <Input
           id="category"
           name="category"
           className="startup-form_input"
@@ -131,7 +131,7 @@ const StartupForm = () => {
         <label htmlFor="link" className="startup-form_label">
           Image URL
         </label>
-        <input
+        <Input
           id="link"
           name="link"
           className="startup-form_input"
@@ -164,7 +164,7 @@ const StartupForm = () => {
       </div>
       <Button
         type="submit"
-        className="startup-form_btn text-white"
+        className="startup-form_btn text-white cursor-pointer"
         disabled={isPending}
       >
         {isPending ? "Submitting ... " : "Submit Your Pitch"}

@@ -22,10 +22,8 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
   } = post;
   return (
     <li className="startup-card group">
-      <div className="flex justify-between items-center;">
-        <p className="font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full group-hover:bg-white-100;">
-          {formatDate(_createdAt)}
-        </p>
+      <div className="flex-between">
+        <p className="startup-card_date">{formatDate(_createdAt)}</p>
         <div className="flex gap-1.5">
           <EyeIcon className="size-6 text-primary" />
           <span>{views}</span>
@@ -53,14 +51,8 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
         </Link>
       </div>
       <Link href={`/startup/${_id}`}>
-        <p className="font-normal text-[16px] line-clamp-2 my-3 text-black-100 break-all;">
-          {description}
-        </p>
-        <img
-          src={image}
-          alt="placeholder"
-          className="w-full h-[164px] rounded-[10px] object-cover;"
-        />
+        <p className="startup-card_desc">{description}</p>
+        <img src={image} alt="placeholder" className="startup-card_img" />
       </Link>
       <div className="flex-between gap-3 mt-5">
         <Link href={`/?query=${category?.toLowerCase()}`}>
@@ -78,7 +70,7 @@ export const StartupCardSkeleton = () => {
   return (
     <>
       {[0, 1, 2, 3, 4].map((index: number) => (
-        <li key={cn("skeleton, index")}>
+        <li key={cn("skeleton", index)}>
           <Skeleton className="startup-card_skeleton" />
         </li>
       ))}

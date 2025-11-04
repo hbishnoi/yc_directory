@@ -1,13 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "tailwindcss-animate";
 
 /* @custom-variant dark (&:is(.dark *)); */
-/* @tailwind base;
-@tailwind components; */
-@tailwind utilities;
 
 @layer base {
   :root {
@@ -119,9 +114,9 @@
     @apply w-56 border-[5px] border-black bg-white p-5 rounded-2xl;
   }
 
-  /* .login {
-    @apply border-[5px] py-4 border-black bg-white text-black relative shadow-100 font-work-sans font-medium hover:shadow-none transition-all duration-500;
-  } */
+  .login {
+    @apply border-[5px] py-4 border-black bg-white text-black relative shadow-100 font-medium hover:shadow-none transition-all duration-500;
+  }
 
   /* searchform */
   .search-form {
@@ -137,8 +132,12 @@
   }
 
   /* startupcard */
-  .startup-card {
+  /* .startup-card {
     @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-black hover:border-primary transition-all duration-500 hover:shadow-[#ee2b69] hover:bg-[#FFE8F0];
+  } */
+
+  .startup-card {
+    @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
   }
 
   .startup-card_date {
@@ -171,7 +170,7 @@
   }
 
   .startup-form_input {
-    @apply border-[3px] border-black px-5 py-7 text-[18px] text-black font-semibold rounded-full mt-3 placeholder:text-black-300;
+    @apply border-[3px] border-black px-5 py-7 text-[18px] text-black font-semibold rounded-full mt-3 placeholder:text-gray-400;
   }
 
   .startup-form_textarea {
@@ -203,7 +202,11 @@
     @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full;
   }
 
-  .pattern {
+  .bg-pattern {
+    @apply bg-[linear-gradient(to_right,transparent_0%,rgba(251,232,67,0.2)_49.5%,rgba(251,232,67,0.6)_50.5%,transparent_50.5%)] bg-[length:5%_100%] bg-center bg-repeat-x;
+  }
+
+  /* .pattern {
     background-image: linear-gradient(
       to right,
       transparent 49.5%,
@@ -214,29 +217,16 @@
     background-size: 5% 100%;
     background-position: center;
     background-repeat: repeat-x;
-  }
+  } */
+
+  /* .tag-tri {
+    @apply before:content-none before:absolute before:top-2 before:left-2 before:border-t-10 before:border-t-black before:border-r-10 before:border-r-transparent after:content-none after:absolute after:bottom-2 after:right-2 after:border-b-10 after:border-b-black after:border-l-10 after:border-l-transparent;
+  } */
 
   .tag-tri {
-    @apply before:content-none before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-none after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent;
+    @apply relative before:content-[''] before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-[''] after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent;
   }
 }
-
-/* .pattern {
-  background-image: linear-gradient(
-    to right,
-    transparent 49.5%,
-    rgba(251, 232, 67, 0.2) 49.5%,
-    rgba(251, 232, 67, 0.6) 50.5%,
-    transparent 50.5%
-  );
-  background-size: 5% 100%;
-  background-position: center;
-  background-repeat: repeat-x;
-} */
-
-/* .tag-tri {
-  @apply before:content-none before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-none after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent;
-} */
 
 .w-md-editor-toolbar {
   padding: 10px;
@@ -313,6 +303,7 @@
 }
 
 @theme inline {
+  --breakpoint-xs: 475px;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -358,8 +349,23 @@
   --shadow-100: 2px 2px 0px 0px rgb(0, 0, 0);
   --shadow-200: 2px 2px 0px 2px rgb(0, 0, 0);
   --shadow-300: 2px 2px 0px 2px rgb(238, 43, 105);
-  --font-sans: "Work Sans", sans-serif;
+  --font-work-sans: "Work Sans", sans-serif;
 }
+
+/* @layer utilities {
+  .pattern {
+    background-image: linear-gradient(
+      to right,
+      transparent 49.5%,
+      rgba(251, 232, 67, 0.2) 49.5%,
+      rgba(251, 232, 67, 0.6) 50.5%,
+      transparent 50.5%
+    );
+    background-size: 5% 100%;
+    background-position: center;
+    background-repeat: repeat-x;
+  }
+} */
 
 /* @layer base {
   * {

@@ -7,7 +7,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 
 import markdownit from "markdown-it";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -34,7 +34,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   return (
     <>
-      <section className="pink_container pattern">
+      <section className="pink_container bg-pattern">
         {/* <p className="bg-secondary px-6 py-3 font-sans font-bold rounded-sm uppercase relative tag-tri;"> */}
         <p className="tag tag-tri">{formatDate(post?._createdAt)}</p>
         <h1 className="heading">{post.title}</h1>

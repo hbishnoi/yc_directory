@@ -20,7 +20,7 @@ export default async function Home({
 
   return (
     <>
-      <section className="pink_container pattern">
+      <section className="pink_container bg-pattern">
         <h1 className="heading">
           Pitch Your Startup, <br /> Connect with Enterpreneurs
         </h1>
@@ -32,10 +32,10 @@ export default async function Home({
       </section>
 
       <section className="section_container">
-        <p className="font-semibold text-[30px] text-black;">
+        <p className="text-30-semibold">
           {query ? `Search results for "${query}"` : "All Startups"}
         </p>
-        <ul className="mt-7 grid md:grid-cols-3 sm:grid-cols-2 gap-5;">
+        <ul className="mt-7 card_grid">
           {posts?.length > 0 ? (
             posts.map((post: StartupTypeCard) => (
               <StartupCard key={post?._id} post={post} />

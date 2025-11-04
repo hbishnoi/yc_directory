@@ -3,7 +3,7 @@ import { client } from "@/sanity/lib/client";
 import { AUTHOR_BY_ID_QUERY } from "@/sanity/lib/queries";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import UserStartups from "@/components/UserStartups";
 import { StartupCardSkeleton } from "@/components/StartupCard";
 

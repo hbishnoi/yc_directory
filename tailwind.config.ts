@@ -60,17 +60,17 @@ const config: Config = {
   plugins: [
     animate,
     typography,
-    plugin(({ addUtilities }) => {
-      addUtilities({
-        ".pattern": {
-          backgroundImage:
-            "linear-gradient(to right, transparent 49.5%, rgba(251,232,67,0.2) 49.5%, rgba(251,232,67,0.6) 50.5%, transparent 50.5%)",
-          backgroundSize: "5% 100%",
-          backgroundPosition: "center",
-          backgroundRepeat: "repeat-x",
-        },
-      });
-    }),
+    // plugin(({ addUtilities }) => {
+    //   addUtilities({
+    //     ".pattern": {
+    //       backgroundImage:
+    //         "linear-gradient(to right, transparent 49.5%, rgba(251,232,67,0.2) 49.5%, rgba(251,232,67,0.6) 50.5%, transparent 50.5%)",
+    //       backgroundSize: "5% 100%",
+    //       backgroundPosition: "center",
+    //       backgroundRepeat: "repeat-x",
+    //     },
+    //   });
+    // }),
   ],
 };
 

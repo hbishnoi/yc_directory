@@ -61,6 +61,7 @@ export const AUTHOR_BY_ID_QUERY =
    name,
    username,
    email,
+   image,
    bio
 }`);
 
